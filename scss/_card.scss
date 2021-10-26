@@ -486,6 +486,14 @@
     }
   }
 
+  @media (max-width: 1199px) {
+    .from {
+      .line {
+        width: 50px;
+      }
+    }
+  }
+
   &__header {
     background-color: #d8d8d8;
 
