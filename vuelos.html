@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuelos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/icons.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container row m-auto">
+      <div class="col-12">
+        <h2 class="title h2">Vuelos</h2>
+      </div>
+      <div class="col-12 col-md-12 col-lg-3">
+        <!-- accordion menu -->
+        <div class="menu-accordion">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Escalas
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#precio"
+                    aria-expanded="true"
+                    aria-controls="precio"
+                  >
+                    precio
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="precio"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#aerolineas"
+                    aria-expanded="true"
+                    aria-controls="aerolineas"
+                  >
+                    Aerolíneas
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="aerolineas"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#duracion"
+                    aria-expanded="true"
+                    aria-controls="duracion"
+                  >
+                    Duración
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="duracion"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#alianzas"
+                    aria-expanded="true"
+                    aria-controls="alianzas"
+                  >
+                    Alianzas
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="alianzas"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#Horarios"
+                    aria-expanded="true"
+                    aria-controls="Horarios"
+                  >
+                    Horarios
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="Horarios"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="mw-100 p-4">
+              <a href="#" class="btn btn-outline-warning text-dark btn-block h5"
+                >Limpiar filtros</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="card-btn bg-primary">
+          <a href="#">
+            <div class="d-flex wrap">
+              <div class="col-9">
+                <h3 class="text-white">¡Alarma!</h3>
+                <p class="mb-0 text-white">
+                  Quiero que me avisen cuando haya una promo de este vuelo
+                </p>
+              </div>
+              <div class="col-3">
+                <div class="icon-big">
+                  <i class="mdi mdi-alarm"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-btn bg-primary">
+          <a href="#">
+            <div class="d-flex wrap">
+              <div class="col-9">
+                <h3 class="text-white">¿No era eso?</h3>
+                <p class="mb-0 text-white">Busca más acá</p>
+              </div>
+              <div class="col-3">
+                <div class="icon-search">
+                  <i class="fa fa-search-plus"></i>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-9">
+        <!-- precios por areolinea -->
+        <div class="box-precio">
+          <p class="tags" id="myTab" role="tablist">
+            <a
+              class="btn btn-primary tags__child active"
+              id="home-tab"
+              data-toggle="tab"
+              href="#home"
+              role="tab"
+              aria-controls="home"
+              aria-selected="true"
+            >
+              Precio por Aerolínea
+            </a>
+            <a
+              class="btn btn-primary tags__child"
+              id="profile-tab"
+              data-toggle="tab"
+              href="#profile"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="false"
+            >
+              Precio por Fechas
+            </a>
+          </p>
+          <div
+            class="collapse fade show active table-price"
+            id="home"
+            role="tabpanel"
+            aria-labelledby="home-tab"
+          >
+            <div class="card">
+              <div class="table-price__column col-12 col-md-3 col-clearfix">
+                <div class="table-price__item">
+                  <p class="mb-0">Aerolínea 2</p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0">1 Escala</p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0">2 Escala</p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="collapse table-price fade"
+            id="profile"
+            role="tabpanel"
+            aria-labelledby="profile-tab"
+          >
+            <div class="card">
+              <div class="table-price__column col-12 col-md-3 col-clearfix">
+                <div class="table-price__item">
+                  <p class="mb-0">Aerolínea 1</p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0">1 Escala</p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0">2 Escala</p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+              <div
+                class="
+                  table-price__column
+                  col-12 col-md-3 col-clearfix
+                  column--border
+                "
+              >
+                <div class="table-price__item">
+                  <p class="mb-0">
+                    <img
+                      src="img/copa-airline.png"
+                      alt=""
+                      class="img-airline"
+                    />
+                    Copa Airlines
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">1 Escala</span>
+                  </p>
+                </div>
+                <div class="table-price__item">
+                  <p class="mb-0 strong">
+                    USD 999 <span class="movil-type">2 Escala</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- box card details airline -->
+        <div class="card package-details">
+          <div class="col-12 col-md-9 column-left col-clearfix">
+            <div class="package-details__box mw-100">
+              <div class="box-1">
+                <!-- row -->
+                <div class="package-details__header package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h5 class="d-flex align-items-center">
+                      <span class="rotate-right airplane-icon text-primary mr-1"
+                        ><i class="mdi mdi mdi-airplane"></i>
+                      </span>
+                      Ida
+                    </h5>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MVD <br />
+                      Montevideo, UY
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MIA <br />
+                      Miami, USA
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <p class="mb-0">3 Octubre del 2021</p>
+                  </div>
+                </div>
+                <div class="package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      <img
+                        src="img/copa-airline.png"
+                        alt=""
+                        class="img-airline"
+                      />
+                      Copa Airlines
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      11:00
+                      <span class="from">
+                        <div class="line">
+                          <i class="mdi mdi-arrow-left"></i>
+                          <div class="text-esca">
+                            <p class="mb-0">1 escala</p>
+                            <div class="circle"></div>
+                          </div>
+                          <i class="mdi mdi-arrow-right"></i>
+                        </div>
+                      </span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      22:00 <span class="hours">11 h 56 m</span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <a href="#" class="btn btn-outline-warning text-dark"
+                      >+ Info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- second box content -->
+              <div class="box-1">
+                <!-- row -->
+                <div class="package-details__header package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h5 class="d-flex align-items-center">
+                      <span class="rotate-left airplane-icon text-primary mr-1"
+                        ><i class="mdi mdi mdi-airplane"></i>
+                      </span>
+                      Vuelta
+                    </h5>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MVD <br />
+                      Montevideo, UY
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MIA <br />
+                      Miami, USA
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <p class="mb-0">3 Octubre del 2021</p>
+                  </div>
+                </div>
+                <div class="package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      <img
+                        src="img/copa-airline.png"
+                        alt=""
+                        class="img-airline"
+                      />
+                      Copa Airlines
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      11:00
+                      <span class="from">
+                        <div class="line">
+                          <i class="mdi mdi-arrow-left"></i>
+                          <div class="text-esca">
+                            <p class="mb-0">1 escala</p>
+                            <div class="circle"></div>
+                          </div>
+                          <i class="mdi mdi-arrow-right"></i>
+                        </div>
+                      </span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      22:00 <span class="hours">11 h 56 m</span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <a href="#" class="btn btn-outline-warning text-dark"
+                      >+ Info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- box end -->
+              <div class="box-1 line-top">
+                <div class="mw-100 d-flex wrap">
+                  <div class="col-12 col-md-6">
+                    <a
+                      href="#"
+                      class="btn btn-outline-warning text-dark btn-block"
+                      >Armá el vuelo a tu medida</a
+                    >
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <p
+                      class="mb-0 text-gray text-13 text-md-left text-sm-center"
+                    >
+                      Agregá asientos, equipaje, comidas especiales, etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column right -->
+          <div class="col-12 col-md-3 column-right">
+            <h4>Precio Final</h4>
+            <h5>USD <span class="price-text">999</span></h5>
+            <hr />
+            <div class="icons-bag">
+              <i class="fa fa-briefcase selected"></i>
+              <i class="fa fa-archive selected"></i>
+              <i class="fa fa-shopping-bag"></i>
+            </div>
+            <p class="text-gray mb-0">Tarifa 1 adulto USD 895</p>
+            <p class="text-gray mb-0">imp. y tasas USD 895</p>
+            <ul>
+              <li>Asiento</li>
+              <li>Comidas</li>
+              <li>Cancelación</li>
+            </ul>
+            <div class="col-12 col-clearfix mt-4">
+              <a href="#" class="btn btn-primary btn-block">Reservar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card package-details">
+          <div class="col-12 col-md-9 column-left col-clearfix">
+            <div class="package-details__box mw-100">
+              <div class="box-1">
+                <!-- row -->
+                <div class="package-details__header package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h5 class="d-flex align-items-center">
+                      <span class="rotate-right airplane-icon text-primary mr-1"
+                        ><i class="mdi mdi mdi-airplane"></i>
+                      </span>
+                      Ida
+                    </h5>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MVD <br />
+                      Montevideo, UY
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MIA <br />
+                      Miami, USA
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <p class="mb-0">3 Octubre del 2021</p>
+                  </div>
+                </div>
+                <div class="package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      <img
+                        src="img/copa-airline.png"
+                        alt=""
+                        class="img-airline"
+                      />
+                      Copa Airlines
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      11:00
+                      <span class="from">
+                        <div class="line">
+                          <i class="mdi mdi-arrow-left"></i>
+                          <div class="text-esca">
+                            <p class="mb-0">1 escala</p>
+                            <div class="circle"></div>
+                          </div>
+                          <i class="mdi mdi-arrow-right"></i>
+                        </div>
+                      </span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      22:00 <span class="hours">11 h 56 m</span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <a href="#" class="btn btn-outline-warning text-dark"
+                      >+ Info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- second box content -->
+              <div class="box-1">
+                <!-- row -->
+                <div class="package-details__header package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h5 class="d-flex align-items-center">
+                      <span class="rotate-left airplane-icon text-primary mr-1"
+                        ><i class="mdi mdi mdi-airplane"></i>
+                      </span>
+                      Vuelta
+                    </h5>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MVD <br />
+                      Montevideo, UY
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      MIA <br />
+                      Miami, USA
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <p class="mb-0">3 Octubre del 2021</p>
+                  </div>
+                </div>
+                <div class="package-details__row">
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <p class="mb-0">
+                      <img
+                        src="img/copa-airline.png"
+                        alt=""
+                        class="img-airline"
+                      />
+                      Copa Airlines
+                    </p>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-3 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      11:00
+                      <span class="from">
+                        <div class="line">
+                          <i class="mdi mdi-arrow-left"></i>
+                          <div class="text-esca">
+                            <p class="mb-0">1 escala</p>
+                            <div class="circle"></div>
+                          </div>
+                          <i class="mdi mdi-arrow-right"></i>
+                        </div>
+                      </span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-4 col-clearfix"
+                  >
+                    <h6 class="mb-0">
+                      22:00 <span class="hours">11 h 56 m</span>
+                    </h6>
+                  </div>
+                  <div
+                    class="package-details__item col-12 col-md-2 col-clearfix"
+                  >
+                    <a href="#" class="btn btn-outline-warning text-dark"
+                      >+ Info</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <!-- box end -->
+              <div class="box-1 line-top">
+                <div class="mw-100 d-flex wrap">
+                  <div class="col-12 col-md-6">
+                    <a
+                      href="#"
+                      class="btn btn-outline-warning text-dark btn-block"
+                      >Armá el vuelo a tu medida</a
+                    >
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <p
+                      class="mb-0 text-gray text-13 text-md-left text-sm-center"
+                    >
+                      Agregá asientos, equipaje, comidas especiales, etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- column right -->
+          <div class="col-12 col-md-3 column-right">
+            <h4>Precio Final</h4>
+            <h5>USD <span class="price-text">999</span></h5>
+            <hr />
+            <div class="icons-bag">
+              <i class="fa fa-briefcase selected"></i>
+              <i class="fa fa-archive selected"></i>
+              <i class="fa fa-shopping-bag"></i>
+            </div>
+            <p class="text-gray mb-0">Tarifa 1 adulto USD 895</p>
+            <p class="text-gray mb-0">imp. y tasas USD 895</p>
+            <ul>
+              <li>Asiento</li>
+              <li>Comidas</li>
+              <li>Cancelación</li>
+            </ul>
+            <div class="col-12 col-clearfix mt-4">
+              <a href="#" class="btn btn-primary btn-block">Reservar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
