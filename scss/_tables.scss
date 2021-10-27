@@ -402,12 +402,10 @@
     width: 1.7%;
   }
 
-  @include media-breakpoint-up(sm) {
-    @for $i from 1 through 7 {
-      .col#{$i} {
-        width: 0% !important;
-        display: none;
-      }
+  @media (max-width: 768px) {
+    .calendario__table {
+      display: block;
+      overflow-x: auto;
     }
   }
 }

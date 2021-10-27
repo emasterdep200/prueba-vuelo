@@ -24,14 +24,14 @@
                 <td class="calendario__header row0 col0 no-bordir">
                   <div class="cal-heading-title"></div>
                 </td>
-                <td class="calendario__header row0 col1 row-head">
+                <td class="calendario__header row0 col1 row-head visible-ms">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
                     Dom.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
-                <td class="calendario__header row0 col2 row-head">
+                <td class="calendario__header row0 col2 row-head visible-ms">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
                     Dom.
@@ -705,6 +705,7 @@
   </body>
   <script>
     var cellTableCalendars = document.querySelectorAll(".js-calendario");
+    var TableCalendario = document.querySelector(".calendario__table");
     var elementACells = document.querySelectorAll(
       ".js-calendario option-price"
     );
@@ -755,6 +756,9 @@
       });
     });
 
+    TableCalendario.addEventListener("mouseleave", () => {
+      clearStyleBefore();
+    });
     //function for print styles in cell
     function clearStyleBefore() {
       document.querySelectorAll(".calendario__cell").forEach((element) => {
