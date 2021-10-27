@@ -159,7 +159,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row2 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -184,7 +184,7 @@
                   id="calopt9"
                   class="
                     calendario__cell
-                    row1
+                    row2
                     col2
                     js-calendario
                     calendario__cell--disable
@@ -235,7 +235,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row3 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -311,7 +311,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row4 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -387,7 +387,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row5 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -463,7 +463,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row6 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -539,7 +539,7 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row1 col0 column-head">
+                <td class="calendario__heading row7 col0 column-head">
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
@@ -703,4 +703,92 @@
       </div>
     </div>
   </body>
+  <script>
+    var cellTableCalendars = document.querySelectorAll(".js-calendario");
+    var elementACells = document.querySelectorAll(
+      ".js-calendario option-price"
+    );
+    var listRow = [
+      "row0",
+      "row1",
+      "row2",
+      "row3",
+      "row4",
+      "row5",
+      "row6",
+      "row7",
+      "row8",
+    ];
+    var listColumn = [
+      "col0",
+      "col1",
+      "col2",
+      "col3",
+      "col4",
+      "col5",
+      "col6",
+      "col7",
+    ];
+
+    cellTableCalendars.forEach((element) => {
+      element.addEventListener("mouseenter", (e) => {
+        let valueRowActual = "";
+        let valueColumnActual = "";
+        //verify the row
+        listRow.forEach((row) => {
+          e.srcElement.classList.forEach((clase) => {
+            if (row == clase) {
+              valueRowActual = row;
+            }
+          });
+        });
+        //verify the column of event div
+        listColumn.forEach((column) => {
+          e.srcElement.classList.forEach((clase) => {
+            if (column == clase) {
+              valueColumnActual = column;
+            }
+          });
+        });
+        //print styles
+        printStyleInCell(valueRowActual, valueColumnActual);
+      });
+    });
+
+    //function for print styles in cell
+    function clearStyleBefore() {
+      document.querySelectorAll(".calendario__cell").forEach((element) => {
+        element.classList.remove("isActived");
+      });
+      document.querySelectorAll(".col0").forEach((element) => {
+        element.classList.remove("isSelect");
+      });
+      document.querySelectorAll(".row0").forEach((element) => {
+        element.classList.remove("isSelect");
+      });
+    }
+
+    function printStyleInCell(row, column) {
+      clearStyleBefore();
+      let valueX = parseInt(row.substr(-1));
+      let valueY = parseInt(column.substr(-1));
+      console.log(row + "  " + column);
+      //action for draw
+      for (y = 0; y < valueY; y++) {
+        let cellTable = document.getElementsByClassName(`row${valueX} col${y}`);
+        cellTable[0].classList.add("isActived");
+      }
+      //for column validation
+      for (x = 0; x < valueX; x++) {
+        let cellTable = document.getElementsByClassName(`row${x} col${valueY}`);
+        cellTable[0].classList.add("isActived");
+      }
+      //add styles to head cell
+      let headCellCol = document.getElementsByClassName(`row0 col${valueY}`);
+      headCellCol[0].classList.add("isSelect");
+
+      let headCellRow = document.getElementsByClassName(`row${valueX} col0`);
+      headCellRow[0].classList.add("isSelect");
+    }
+  </script>
 </html>

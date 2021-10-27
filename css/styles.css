@@ -2032,10 +2032,10 @@ pre code {
   width: 100%;
 }
 .calendario__table .isSelect {
-  background-color: #7f4391;
+  background-color: #7f4391 !important;
 }
 .calendario__table .isSelect .cal-heading-title {
-  opacity: 1;
+  opacity: 1 !important;
 }
 .calendario__table .isActived {
   background-color: #02cc90;
@@ -2142,7 +2142,7 @@ pre code {
   font-size: 14px;
 }
 .calendario__cell--disable {
-  background: #e9ecef;
+  background: #e9ecef !important;
   padding: 10px 20px;
 }
 .calendario__cell--disable:hover {
@@ -2153,6 +2153,36 @@ pre code {
   text-align: center;
   border: 2px solid #e1e1e1;
   width: 1.7%;
+}
+@media (min-width: 576px) {
+  .calendario .col1 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col2 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col3 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col4 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col5 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col6 {
+    width: 0% !important;
+    display: none;
+  }
+  .calendario .col7 {
+    width: 0% !important;
+    display: none;
+  }
 }
 
 .form-control {

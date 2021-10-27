@@ -248,10 +248,10 @@
     width: 100%;
 
     .isSelect {
-      background-color: $primary;
+      background-color: $primary !important;
 
       .cal-heading-title {
-        opacity: 1;
+        opacity: 1 !important;
       }
     }
 
@@ -386,7 +386,7 @@
     }
 
     &--disable {
-      background: $gray-200;
+      background: $gray-200 !important;
       padding: 10px 20px;
 
       &:hover {
@@ -400,5 +400,14 @@
     text-align: center;
     border: 2px solid #e1e1e1;
     width: 1.7%;
+  }
+
+  @include media-breakpoint-up(sm) {
+    @for $i from 1 through 7 {
+      .col#{$i} {
+        width: 0% !important;
+        display: none;
+      }
+    }
   }
 }

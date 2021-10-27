@@ -204,7 +204,8 @@
 
     radiosInputs.forEach((element) => {
       element.addEventListener("click", (e) => {
-        var addClass = e.originalTarget.getAttribute("target");
+        console.log(e);
+        var addClass = e.srcElement.getAttribute("target");
         drawStyleTopackage(addClass);
       });
     });
