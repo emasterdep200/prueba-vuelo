@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vuelos</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/icons.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container row m-auto">
+      <div class="col-12">
+        <h2 class="title mb-1">Calendario</h2>
+        <p class="text-gray">
+          Muestra de vuelos y mejores tarifas disponibles por fecha
+        </p>
+        <div class="mw-100 calendario">
+          <table class="calendario__table">
+            <tbody>
+              <tr>
+                <td class="calendario__header row0 col0 no-bordir">
+                  <div class="cal-heading-title"></div>
+                </td>
+                <td class="calendario__header row0 col1 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col2 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col3 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col4 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col5 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col6 row-head">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+                <td class="calendario__header row0 col7 row-head no-bordir">
+                  <div class="cal-heading-title">IDA</div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">24 Oct.</small>
+                  </div>
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td
+                  class="
+                    calendario__heading
+                    row1
+                    col0
+                    column-head column-head__start
+                  "
+                >
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt1"
+                  class="
+                    calendario__cell
+                    row1
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt2"
+                  class="
+                    calendario__cell
+                    row1
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt3"
+                  class="calendario__cell row1 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt4"
+                  class="calendario__cell row1 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt5"
+                  class="calendario__cell row1 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt6"
+                  class="calendario__cell row1 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt7"
+                  class="calendario__cell row1 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt8"
+                  class="
+                    calendario__cell
+                    row2
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt9"
+                  class="
+                    calendario__cell
+                    row1
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt10"
+                  class="calendario__cell row2 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt11"
+                  class="calendario__cell row2 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt12"
+                  class="calendario__cell row2 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt13"
+                  class="calendario__cell row2 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt14"
+                  class="calendario__cell row2 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt15"
+                  class="
+                    calendario__cell
+                    row3
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt16"
+                  class="
+                    calendario__cell
+                    row3
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt17"
+                  class="calendario__cell row3 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt18"
+                  class="calendario__cell row3 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt19"
+                  class="calendario__cell row3 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt20"
+                  class="calendario__cell row3 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt21"
+                  class="calendario__cell row3 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt22"
+                  class="
+                    calendario__cell
+                    row4
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt23"
+                  class="
+                    calendario__cell
+                    row4
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt24"
+                  class="calendario__cell row4 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt25"
+                  class="calendario__cell row4 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt26"
+                  class="calendario__cell row4 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt27"
+                  class="calendario__cell row4 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt28"
+                  class="calendario__cell row4 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt29"
+                  class="
+                    calendario__cell
+                    row5
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt30"
+                  class="
+                    calendario__cell
+                    row5
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt31"
+                  class="calendario__cell row5 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt32"
+                  class="calendario__cell row5 col4 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt33"
+                  class="calendario__cell row5 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt34"
+                  class="calendario__cell row5 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt35"
+                  class="calendario__cell row5 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt36"
+                  class="
+                    calendario__cell
+                    row6
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt37"
+                  class="
+                    calendario__cell
+                    row6
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt38"
+                  class="calendario__cell row6 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt39"
+                  class="calendario__cell row6 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt40"
+                  class="calendario__cell row6 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt41"
+                  class="calendario__cell row6 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt42"
+                  class="calendario__cell row6 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td class="calendario__heading row1 col0 column-head">
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt43"
+                  class="
+                    calendario__cell
+                    row7
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt44"
+                  class="
+                    calendario__cell
+                    row7
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt45"
+                  class="calendario__cell row7 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt46"
+                  class="calendario__cell row7 col4 js-calendario selected"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt47"
+                  class="calendario__cell row7 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt48"
+                  class="calendario__cell row7 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt49"
+                  class="calendario__cell row7 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+              <tr>
+                <td
+                  class="
+                    calendario__heading
+                    row8
+                    col0
+                    column-head column-head__end
+                  "
+                >
+                  <div class="cal-heading-title">
+                    <p class="mb-0">VUELTA</p>
+                  </div>
+                  <div class="inner-wrap">
+                    Dom.
+                    <small class="cal-month">31 Oct.</small>
+                  </div>
+                </td>
+                <td
+                  id="calopt50"
+                  class="
+                    calendario__cell
+                    row8
+                    col1
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"></span>
+                </td>
+                <td
+                  id="calopt51"
+                  class="
+                    calendario__cell
+                    row8
+                    col2
+                    js-calendario
+                    calendario__cell--disable
+                  "
+                >
+                  <span class="option-price"><a href="#"></a></span>
+                </td>
+                <td
+                  id="calopt52"
+                  class="calendario__cell row8 col3 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt53"
+                  class="calendario__cell row8 col4 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt54"
+                  class="calendario__cell row8 col5 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt55"
+                  class="calendario__cell row8 col6 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+                <td
+                  id="calopt56"
+                  class="calendario__cell row8 col7 js-calendario"
+                >
+                  <span class="option-price"
+                    ><a href="#">COP 1,150,574</a></span
+                  >
+                </td>
+              </tr>
+              <!-- end tr of row -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

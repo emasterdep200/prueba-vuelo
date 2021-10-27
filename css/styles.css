@@ -5,16 +5,17 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700;800&display=swap");
 :root {
   --blue: #7f4391;
-  --indigo: #6610f2;
+  --indigo: #48005e;
   --purple: #6f42c1;
   --pink: #e83e8c;
   --red: #dc3545;
-  --orange: #fd7e14;
+  --orange: #f8b500;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #20c997;
+  --teal: #02cc90;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
@@ -32,7 +33,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-sans-serif: "Montserrat", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -55,7 +56,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2024,6 +2025,136 @@ pre code {
   }
 }
 
+.calendario {
+  margin-bottom: 2em;
+}
+.calendario__table {
+  width: 100%;
+}
+.calendario__table .isSelect {
+  background-color: #7f4391;
+}
+.calendario__table .isSelect .cal-heading-title {
+  opacity: 1;
+}
+.calendario__table .isActived {
+  background-color: #02cc90;
+}
+.calendario__table .isActived a {
+  color: white;
+}
+.calendario__table .selected {
+  background-color: #7f4391;
+}
+.calendario__table .selected a {
+  color: white;
+}
+.calendario__table .row-head {
+  color: #fff;
+  background-color: rgba(127, 67, 145, 0.8);
+  overflow: hidden;
+  transition: 0.2s ease-in;
+}
+.calendario__table .row-head:hover {
+  background-color: #7f4391;
+}
+.calendario__table .row-head:hover .cal-heading-title {
+  opacity: 1;
+}
+.calendario__table .row-head:nth-child(8) {
+  border-radius: 0px 10px 0px 0px;
+}
+.calendario__table .row-head:nth-child(2) {
+  border-radius: 10px 0px 0px 0px;
+}
+.calendario__table .row-head .cal-heading-title {
+  font-size: 10px;
+  background: #48005e;
+  margin-bottom: 8px;
+  opacity: 0;
+}
+.calendario__table .inner-wrap {
+  padding: 5px 10px;
+}
+.calendario__table .inner-wrap .cal-month {
+  width: 100%;
+  display: block;
+  font-size: 75%;
+  opacity: 0.7;
+  margin-top: -3px;
+  margin-bottom: 6px;
+}
+.calendario__table .no-bordir {
+  border-right: 0px !important;
+}
+.calendario__table .column-head {
+  color: #fff;
+  background-color: rgba(127, 67, 145, 0.8);
+  overflow: hidden;
+  transition: 0.2s ease-in;
+  position: relative;
+  display: flex;
+  transition: 0.2s ease;
+  width: 100%;
+  border: 0px;
+  border-bottom: 2px solid #c4c4c4;
+}
+.calendario__table .column-head__start {
+  border-radius: 10px 0 0 0;
+}
+.calendario__table .column-head__end {
+  border-radius: 0 0 0 10px;
+}
+.calendario__table .column-head .cal-heading-title {
+  width: 15%;
+  background: #48005e;
+  position: relative;
+  opacity: 0;
+}
+.calendario__table .column-head .cal-heading-title p {
+  transform: rotate(-90deg);
+  font-size: 11px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 3px;
+}
+.calendario__table .column-head .inner-wrap {
+  padding: 5px 10px;
+  width: 85%;
+  text-align: left;
+}
+.calendario__header {
+  border: 0px !important;
+  border-right: 1px solid #c4c4c4 !important;
+}
+.calendario__cell:hover {
+  background-color: #28a745;
+  border-bottom: 3px solid #7f4391;
+}
+.calendario__cell:hover a {
+  color: white;
+}
+.calendario__cell a {
+  text-decoration: none;
+}
+.calendario__cell .option-price {
+  font-size: 14px;
+}
+.calendario__cell--disable {
+  background: #e9ecef;
+  padding: 10px 20px;
+}
+.calendario__cell--disable:hover {
+  background: #e9ecef !important;
+  border-bottom: 0px;
+}
+.calendario td {
+  text-align: center;
+  border: 2px solid #e1e1e1;
+  width: 1.7%;
+}
+
 .form-control {
   display: block;
   width: 100%;
@@ -2477,7 +2608,6 @@ textarea.form-control {
 }
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(127, 67, 145, 0.25);
 }
 .btn.disabled, .btn:disabled {
   opacity: 0.65;
@@ -2984,6 +3114,8 @@ input[type=button].btn-block {
   background: #bfa1c7;
   border: 0px;
   font-size: 20px;
+  border-radius: 0px !important;
+  margin-right: 5px;
 }
 
 .fade {
@@ -4651,6 +4783,7 @@ input[type=button].btn-block {
   margin-top: 13px;
   font-size: 14px;
   color: gray;
+  list-style-type: "+ ";
 }
 .package-details .box-1 {
   display: flex;
@@ -4666,7 +4799,7 @@ input[type=button].btn-block {
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-  padding: 11px 15px;
+  padding: 20px 15px;
   align-items: center;
 }
 .package-details__row .airplane-icon {
@@ -4701,11 +4834,11 @@ input[type=button].btn-block {
 }
 .package-details__row .from .line .mdi-arrow-left {
   left: -8px;
-  bottom: -10px;
+  bottom: -11px;
 }
 .package-details__row .from .line .mdi-arrow-right {
   right: -5px;
-  bottom: -10px;
+  bottom: -11px;
 }
 .package-details__row .from .line .text-esca {
   position: absolute;
@@ -4766,8 +4899,14 @@ input[type=button].btn-block {
     display: none;
   }
 }
+@media (max-width: 1199px) {
+  .package-details .from .line {
+    width: 50px;
+  }
+}
 .package-details__header {
   background-color: #d8d8d8;
+  padding: 4px 15px;
 }
 .package-details__header p {
   font-size: 13px;
@@ -4805,6 +4944,85 @@ input[type=button].btn-block {
 .card-btn h3 {
   font-weight: 600;
   margin-bottom: 12px;
+}
+
+.card-paquete {
+  border-radius: 12px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+.card-paquete__header {
+  padding: 10px;
+  border-bottom: 1px solid #dee2e6;
+}
+.card-paquete__header .strong {
+  margin-bottom: 0px;
+}
+.card-paquete__header h5:nth-child(2) {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
+.card-paquete .bg-white {
+  padding: 10px;
+}
+.card-paquete .bg-white input[type=radio] {
+  height: 20px;
+  width: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.card-paquete .bg-white input[type=radio]::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border-radius: 100%;
+  position: absolute;
+  z-index: 1;
+  top: -3px;
+  left: -3px;
+  border: 2px solid gray;
+}
+.card-paquete .bg-white input[type=radio]:checked {
+  background: #7f4391;
+  color: #fafafa;
+  z-index: 2;
+  position: absolute;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+.card-paquete .bg-white .price {
+  font-size: 22px;
+  font-weight: 600;
+}
+.card-paquete__details {
+  padding: 15px;
+  background: #f0f0f0;
+}
+.card-paquete__list {
+  padding: 0px;
+  list-style: none;
+}
+.card-paquete__list li {
+  margin-bottom: 4px;
+}
+.card-paquete__list li .sub-item {
+  color: gray;
+  display: block;
+  font-size: 14px;
+}
+.card-paquete__selected {
+  border: 1px solid #7f4391;
+}
+.card-paquete__selected .card-paquete__header {
+  background: #7f4391;
+}
+.card-paquete__selected .card-paquete__header h5 {
+  color: white;
 }
 
 .breadcrumb {
@@ -5817,12 +6035,22 @@ a.close.disabled {
     max-width: 1140px;
   }
 }
+.modal-ct .modal-header {
+  border-bottom: 0px;
+}
+.modal-ct .modal-body {
+  padding: 2rem;
+}
+.modal-ct .modal-footer {
+  border-top: 0px;
+}
+
 .tooltip {
   position: absolute;
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5924,7 +6152,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7704,6 +7932,10 @@ button.bg-dark:focus {
 
 .mh-100 {
   max-height: 100% !important;
+}
+
+.w-100 {
+  width: 100%;
 }
 
 .min-vw-100 {

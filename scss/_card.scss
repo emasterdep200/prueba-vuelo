@@ -328,7 +328,7 @@
         color: gray;
 
         .selected {
-          color: #f8b500;
+          color: $orange;
         }
       }
 
@@ -343,6 +343,7 @@
         margin-top: 13px;
         font-size: 14px;
         color: gray;
+        list-style-type: "+ ";
       }
     }
   }
@@ -359,7 +360,7 @@
   &__row {
     @include flexSetting;
     width: 100%;
-    padding: 11px 15px;
+    padding: 20px 15px;
     align-items: center;
 
     .airplane-icon {
@@ -387,23 +388,23 @@
       .line {
         width: 70px;
         height: 2px;
-        background: #f8b500;
+        background: $orange;
         position: relative;
 
         .mdi {
-          color: #f8b500;
+          color: $orange;
           font-size: 18px;
           position: absolute;
         }
 
         .mdi-arrow-left {
           left: -8px;
-          bottom: -10px;
+          bottom: -11px;
         }
 
         .mdi-arrow-right {
           right: -5px;
-          bottom: -10px;
+          bottom: -11px;
         }
 
         .text-esca {
@@ -423,7 +424,7 @@
           .circle {
             width: 8px;
             height: 8px;
-            background: #f8b500;
+            background: $orange;
             border-radius: 50%;
             position: absolute;
             left: 42%;
@@ -496,6 +497,7 @@
 
   &__header {
     background-color: #d8d8d8;
+    padding: 4px 15px;
 
     p {
       font-size: 13px;
@@ -511,7 +513,7 @@
   margin-bottom: 15px;
 
   .icon-big {
-    color: #f8b500;
+    color: $orange;
     font-size: 150px;
 
     i {
@@ -522,7 +524,7 @@
   }
 
   .icon-search {
-    color: #f8b500;
+    color: $orange;
     font-size: 100px;
 
     i {
@@ -540,5 +542,102 @@
   h3 {
     font-weight: 600;
     margin-bottom: 12px;
+  }
+}
+
+//card package promo
+.card-paquete {
+  border-radius: 12px;
+  border: 1px solid $gray-300;
+  margin-bottom: 2em;
+  overflow: hidden;
+
+  &__header {
+    padding: 10px;
+    border-bottom: 1px solid $gray-300;
+
+    .strong {
+      margin-bottom: 0px;
+    }
+
+    h5 {
+      &:nth-child(2) {
+        font-size: 18px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .bg-white {
+    padding: 10px;
+
+    input[type="radio"] {
+      height: 20px;
+      width: 20px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &::before {
+        content: "";
+        display: block;
+        height: 20px;
+        width: 20px;
+        background-color: transparent;
+        border-radius: 100%;
+        position: absolute;
+        z-index: 1;
+        top: -3px;
+        left: -3px;
+        border: 2px solid gray;
+      }
+
+      &:checked {
+        background: #7f4391;
+        color: #fafafa;
+        z-index: 2;
+        position: absolute;
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: 600;
+    }
+  }
+
+  &__details {
+    padding: 15px;
+    background: #f0f0f0;
+  }
+
+  &__list {
+    padding: 0px;
+    list-style: none;
+
+    li {
+      margin-bottom: 4px;
+
+      .sub-item {
+        color: gray;
+        display: block;
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__selected {
+    border: 1px solid $primary;
+
+    .card-paquete__header {
+      background: $primary;
+
+      h5 {
+        color: white;
+      }
+    }
   }
 }
