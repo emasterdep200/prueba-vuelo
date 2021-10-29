@@ -2031,6 +2031,9 @@ pre code {
 .calendario__table {
   width: 100%;
 }
+.calendario__table .btn-circle {
+  display: none;
+}
 .calendario__table .isSelect {
   background-color: #7f4391 !important;
 }
@@ -2155,9 +2158,8 @@ pre code {
   width: 1.7%;
 }
 @media (max-width: 768px) {
-  .calendario .calendario__table {
+  .calendario .btn-circle {
     display: block;
-    overflow-x: auto;
   }
 }
 
@@ -3109,6 +3111,19 @@ input[type=submit].btn-block,
 input[type=reset].btn-block,
 input[type=button].btn-block {
   width: 100%;
+}
+
+.btn-circle {
+  border: 0px;
+  border-radius: 50%;
+  background: #7f4391;
+  color: white;
+  font-size: 20px;
+  padding: 3px 9px;
+}
+.btn-circle:hover {
+  background-color: black;
+  color: white;
 }
 
 .tags {

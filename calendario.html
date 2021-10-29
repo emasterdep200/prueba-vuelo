@@ -18,11 +18,28 @@
           Muestra de vuelos y mejores tarifas disponibles por fecha
         </p>
         <div class="mw-100 calendario">
-          <table class="calendario__table">
+          <table class="calendario__table" id="data-table-calendar">
             <tbody>
               <tr>
                 <td class="calendario__header row0 col0 no-bordir">
-                  <div class="cal-heading-title"></div>
+                  <div class="cal-heading-title">
+                    <div class="col-12 d-flex wrap">
+                      <button
+                        class="btn-circle mr-1"
+                        onclick="viewLast()"
+                        id="btnResponsiveButtom1"
+                      >
+                        <i class="mdi mdi-arrow-left-drop-circle"></i>
+                      </button>
+                      <button
+                        class="btn-circle"
+                        onclick="viewNext()"
+                        id="btnResponsiveButtom2"
+                      >
+                        <i class="mdi mdi-arrow-right-drop-circle"></i>
+                      </button>
+                    </div>
+                  </div>
                 </td>
                 <td class="calendario__header row0 col1 row-head visible-ms">
                   <div class="cal-heading-title">IDA</div>
@@ -34,42 +51,42 @@
                 <td class="calendario__header row0 col2 row-head visible-ms">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Lun.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
                 <td class="calendario__header row0 col3 row-head">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Mar.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
                 <td class="calendario__header row0 col4 row-head">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Mié.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
                 <td class="calendario__header row0 col5 row-head">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Jue.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
                 <td class="calendario__header row0 col6 row-head">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Vie.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
                 <td class="calendario__header row0 col7 row-head no-bordir">
                   <div class="cal-heading-title">IDA</div>
                   <div class="inner-wrap">
-                    Dom.
+                    Sáb.
                     <small class="cal-month">24 Oct.</small>
                   </div>
                 </td>
@@ -77,6 +94,7 @@
               <!-- end tr of row -->
               <tr>
                 <td
+                  scope="row"
                   class="
                     calendario__heading
                     row1
@@ -159,12 +177,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row2 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row2 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Lun.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -235,12 +256,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row3 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row3 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Mar.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -311,12 +335,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row4 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row4 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Mié.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -387,12 +414,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row5 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row5 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Jue.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -463,12 +493,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row6 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row6 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Vie.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -539,12 +572,15 @@
               </tr>
               <!-- end tr of row -->
               <tr>
-                <td class="calendario__heading row7 col0 column-head">
+                <td
+                  scope="row"
+                  class="calendario__heading row7 col0 column-head"
+                >
                   <div class="cal-heading-title">
                     <p class="mb-0">VUELTA</p>
                   </div>
                   <div class="inner-wrap">
-                    Dom.
+                    Sáb.
                     <small class="cal-month">31 Oct.</small>
                   </div>
                 </td>
@@ -616,6 +652,7 @@
               <!-- end tr of row -->
               <tr>
                 <td
+                  scope="row"
                   class="
                     calendario__heading
                     row8
@@ -703,7 +740,9 @@
       </div>
     </div>
   </body>
+  <script src="js/responsive-table.js"></script>
   <script>
+    //funcion animation
     var cellTableCalendars = document.querySelectorAll(".js-calendario");
     var TableCalendario = document.querySelector(".calendario__table");
     var elementACells = document.querySelectorAll(
