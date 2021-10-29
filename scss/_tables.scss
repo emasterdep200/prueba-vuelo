@@ -247,6 +247,10 @@
   &__table {
     width: 100%;
 
+    .btn-circle {
+      display: none;
+    }
+
     .isSelect {
       background-color: $primary !important;
 
@@ -403,9 +407,8 @@
   }
 
   @media (max-width: 768px) {
-    .calendario__table {
+    .btn-circle {
       display: block;
-      overflow-x: auto;
     }
   }
 }
