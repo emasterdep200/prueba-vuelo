@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/icons.min.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container row m-auto">
+      <div class="col-12">
+        <h2 class="title h2">Ya casi estamos pronto :)</h2>
+      </div>
+      <div class="col-12 col-md-12 col-lg-3">
+        <!-- accordion menu -->
+        <div class="mi-reserva card">
+          <div class="mi-reserva__header">
+            <h4>Mi reserva</h4>
+          </div>
+          <div class="mi-reserva__white">
+            <p><i class="fas fa-calendar"></i> 00/00/000 - 00/00/000</p>
+            <p class="mt-2"><i class="fas fa-user"></i> 00 Adultos 00 Niños</p>
+          </div>
+          <div class="mi-reserva__list">
+            <div class="list-item d-flex">
+              <div class="col-md-8 col-sm-6 col-8 col-clearfix list-item__text">
+                <h4><i class="fas fa-plane"></i> Vuelos</h4>
+              </div>
+              <div class="col-md-4 col-sm-6 col-4 col-clearfix">
+                <a class="btn btn-outline-warning text-dark" href="#"
+                  >Detalle</a
+                >
+              </div>
+            </div>
+            <div class="list-item d-flex">
+              <div class="col-md-8 col-sm-6 col-8 col-clearfix list-item__text">
+                <h4><i class="fas fa-bed"></i> Hoteles</h4>
+              </div>
+              <div class="col-md-4 col-sm-6 col-4 col-clearfix">
+                <a class="btn btn-outline-warning text-dark" href="#"
+                  >Detalle</a
+                >
+              </div>
+            </div>
+            <div class="list-item d-flex">
+              <div class="col-md-8 col-sm-6 col-8 col-clearfix list-item__text">
+                <h4><i class="fas fa-puzzle-piece"></i> Actividades</h4>
+              </div>
+              <div class="col-md-4 col-sm-6 col-4 col-clearfix">
+                <a class="btn btn-outline-warning text-dark" href="#"
+                  >Detalle</a
+                >
+              </div>
+            </div>
+            <div class="list-item d-flex">
+              <div class="col-md-8 col-sm-6 col-8 col-clearfix list-item__text">
+                <h4><i class="fas fa-bus"></i> Traslados</h4>
+              </div>
+              <div class="col-md-4 col-sm-6 col-4 col-clearfix">
+                <a class="btn btn-outline-warning text-dark" href="#"
+                  >Detalle</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="mi-reserva__white">
+            <h4 class="font-weight-lighter">Total</h4>
+            <h3 class="mi-reserva__price">
+              USD <span class="price">999</span>
+            </h3>
+            <hr />
+            <h6 class="text-gray sub-title">Detalle de pago</h6>
+            <div class="mi-reserva__detalle row mt-4">
+              <div class="col-md-7 col-8 col-clearfix">
+                <p>Servicio</p>
+              </div>
+              <div class="col-md-5 col-4 col-clearfix">
+                <p>USD 0000</p>
+              </div>
+            </div>
+            <div class="mi-reserva__detalle row">
+              <div class="col-md-7 col-8 col-clearfix">
+                <p>Impuesto y tasas</p>
+              </div>
+              <div class="col-md-5 col-4 col-clearfix">
+                <p>USD 0000</p>
+              </div>
+            </div>
+            <div class="mi-reserva__detalle row">
+              <div class="col-md-7 col-8 col-clearfix">
+                <p>Otros Cargos</p>
+              </div>
+              <div class="col-md-5 col-4 col-clearfix">
+                <p>USD 0000</p>
+              </div>
+            </div>
+            <div class="mi-reserva__detalle row">
+              <div class="col-md-7 col-8 col-clearfix">
+                <p>Descuento</p>
+              </div>
+              <div class="col-md-5 col-4 col-clearfix">
+                <p>USD 0000</p>
+              </div>
+            </div>
+            <div class="mi-reserva__detalle row">
+              <div class="col-md-7 col-8 col-clearfix">
+                <p>Total</p>
+              </div>
+              <div class="col-md-5 col-4 col-clearfix">
+                <p>USD 0000</p>
+              </div>
+            </div>
+            <div class="w-100 mt-5">
+              <a class="text-dark text-13" href="#">Ver Politicas de cambio</a>
+            </div>
+            <div class="w-100">
+              <a class="text-dark text-13" href="#"
+                >Ver Terminos y Condiciones</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-9">
+        <div class="checkout-form">
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Documentación Requerida
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <p class="mt-3">
+                    Confirmá las condiciones de entrada a tu destino, los
+                    requisitos para la vuelta y las especificaciones necesarias
+                    de tus documentos previo a confirmar el viaje.
+                  </p>
+                  <form class="form-checkout" action="#">
+                    <h5 class="font-weight-bold">Datos del pasajero 1</h5>
+                    <div class="form-group col-12 col-clearfix mt-4">
+                      <label for="name-row"
+                        >Nombre Completo
+                        <span
+                          >(*) Como figura en el documento de viaje</span
+                        ></label
+                      >
+                      <input type="text" class="form-control" id="name-row" />
+                    </div>
+                    <div class="form-group col-12 col-clearfix">
+                      <label for="lastname-row"
+                        >Apellido Completo
+                        <span
+                          >(*) Como figura en el documento de viaje</span
+                        ></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastname-row"
+                      />
+                    </div>
+                    <div class="form-group col-12 col-clearfix">
+                      <label for="lastname-row">País de residencia </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="lastname-row"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#precio"
+                    aria-expanded="true"
+                    aria-controls="precio"
+                  >
+                    Información de tu viaje
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="precio"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#aerolineas"
+                    aria-expanded="true"
+                    aria-controls="aerolineas"
+                  >
+                    Contacto y envío de vouchers
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="aerolineas"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#duracion"
+                    aria-expanded="true"
+                    aria-controls="duracion"
+                  >
+                    Tengo un cupón de descuento
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="duracion"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#alianzas"
+                    aria-expanded="true"
+                    aria-controls="alianzas"
+                  >
+                    Elegí tu forma de pago
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="alianzas"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#Horarios"
+                    aria-expanded="true"
+                    aria-controls="Horarios"
+                  >
+                    Información de facturación
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="Horarios"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#Horarios"
+                    aria-expanded="true"
+                    aria-controls="Horarios"
+                  >
+                    Agregá el Seguro de Viaje y viajá tranquilo
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="Horarios"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    class="btn btn-link"
+                    data-toggle="collapse"
+                    data-target="#Horarios"
+                    aria-expanded="true"
+                    aria-controls="Horarios"
+                  >
+                    Confirmá tus datos
+                    <div class="icon-suspendido">
+                      <i class="mdi mdi-chevron-down"></i>
+                    </div>
+                  </button>
+                </h5>
+              </div>
+
+              <div
+                id="Horarios"
+                class="collapse"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">Anim pariatur cliche</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="checkbox" name="" id="condiciones-check" />
+              <label class="font-weight-lighter mt-4" for="condiciones-check"
+                >Leí y acepto las condiciones de compra , políticas de
+                privacidad y políticas de cambios y cancelaciones.</label
+              >
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block btn-big">
+                ¡Compro!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
